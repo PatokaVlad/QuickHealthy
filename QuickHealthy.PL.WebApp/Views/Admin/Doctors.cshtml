@@ -1,0 +1,40 @@
+﻿@inject QuickHealthy.BLL.Interfaces.IDoctorService _doctorsService
+@inject AutoMapper.IMapper _mapper
+@inject QuickHealthy.PL.WebApp.Services.DoctorHelperService _doctorHelperService
+
+@{
+    var doctors = _mapper.Map<IEnumerable<QuickHealthy.PL.Models.DoctorViewModel>>(_doctorsService.GetAll());
+}
+
+<table class="table">
+    <thead>
+        <tr><th>Id</th><th>Doctor first name</th><th>Doctor last name</th><th>Doctor job position</th><th>Start work time</th><th>End work time</th></tr>
+    </thead>
+    <tbody>
+        @foreach (var doctor in doctors)
+        {
+        <tr>
+            <td>
+                @doctor.Id
+            </td>
+            <td>
+                @doctor.FirstName
+            </td>
+            <td>
+                @doctor.LastName
+            </td>
+            <td>
+                @doctor.JobPosition
+            </td>
+            <td>
+                @doctor.StartWorkTime
+            </td>
+            <td>
+                @doctor.EndWorkTime
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="AddDoctor" asp-controller="Admin">Add</a>

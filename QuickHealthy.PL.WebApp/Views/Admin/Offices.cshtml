@@ -1,0 +1,32 @@
+﻿@inject QuickHealthy.BLL.Interfaces.IOfficeService _officeService
+@inject AutoMapper.IMapper _mapper
+
+@{
+    var offices = _mapper.Map<IEnumerable<QuickHealthy.PL.Models.OfficeViewModel>>(_officeService.GetAll());
+}
+
+<table class="table">
+    <thead>
+        <tr><th>Id</th><th>Description</th><th>DoctorId</th></tr>
+    </thead>
+
+
+    <tbody>
+        @foreach (var office in offices)
+        {
+        <tr>
+            <td>
+                @office.Id
+            </td>
+            <td>
+                @office.Description
+            </td>
+            <td>
+                @office.DoctorId
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="AddOffice" asp-controller="Admin">Add</a>

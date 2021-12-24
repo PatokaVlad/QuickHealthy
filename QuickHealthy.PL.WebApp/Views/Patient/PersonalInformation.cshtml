@@ -1,0 +1,53 @@
+﻿@model dynamic
+
+<style>
+    .personInfo {
+        box-sizing: border-box;
+    }
+
+    .info {
+        float: left;
+        width: 30%;
+        height: 300px; /* only for demonstration, should be removed */
+        background: #ccc;
+        padding: 20px;
+    }
+
+        /* Style the list inside the menu */
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+    .diag {
+        float: left;
+        padding: 20px;
+        width: 70%;
+        background-color: #f1f1f1;
+        height: 300px; /* only for demonstration, should be removed */
+    }
+</style>
+
+<section class="personInfo">
+    <nav class="info">
+        <ul>
+            <p>First name: @Model.FirstName</p>
+            <p>Last name: @Model.LastName</p>
+            <p>City of birth: @Model.CityOfBirth</p>
+            <p>Birth date: @Model.BirthDate</p>
+            <p>Medical card id: @Model.MedicalCardId</p>
+        </ul>
+    </nav>
+
+    <article class="diag">
+        @if (Model.HasAppointment == true)
+        {
+                <p>Diagnosis: @Model.Diagnosis</p>
+                <p>Doctor first name: @Model.DoctorFirstName</p>
+                <p>Doctor last name: @Model.DoctorLastName</p>
+                <p>Doctor job position: @Model.DoctorJobPosition</p>
+                <p>Date: @Model.Date</p>
+                <p>Time: @Model.Time</p>
+        }
+    </article>
+</section>

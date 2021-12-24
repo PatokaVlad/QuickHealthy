@@ -1,0 +1,45 @@
+﻿@model QuickHealthy.PL.Models.DoctorViewModel
+
+<style>
+    .personInfo {
+        box-sizing: border-box;
+    }
+
+    .info {
+        float: left;
+        width: 30%;
+        height: 300px; /* only for demonstration, should be removed */
+        background: #ccc;
+        padding: 20px;
+    }
+
+        /* Style the list inside the menu */
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+    .workInfo {
+        float: left;
+        padding: 20px;
+        width: 70%;
+        background-color: #f1f1f1;
+        height: 300px; /* only for demonstration, should be removed */
+    }
+</style>
+
+<section class="personInfo">
+    <nav class="info">
+        <ul>
+            <p>First name: @Model.FirstName</p>
+            <p>Last name: @Model.LastName</p>
+        </ul>
+    </nav>
+
+    <article class="workInfo">
+        <p>Start wotk time: @Model.StartWorkTime</p>
+        <p>End work time: @Model.EndWorkTime</p>
+        <p>Job position: @Model.JobPosition</p>
+        <p>Office id: @Model.OfficeId</p>
+    </article>
+</section>

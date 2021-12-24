@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31229.75
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickHealthy.DAL", "QuickHealthy.DAL\QuickHealthy.DAL.csproj", "{6BE23769-B61D-4612-B09F-E1321DCF2AE9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickHealthy.BLL", "QuickHealthy.BLL\QuickHealthy.BLL.csproj", "{89BDF1DF-EB02-4F5E-A124-BD3AFAA7D6EF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuickHealthy.PL", "QuickHealty.PL\QuickHealthy.PL.csproj", "{3001CA92-DEFF-43B5-8CA1-AACB32B9112F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuickHealthy.PL.WebApi", "QuickHealthy.PL.WebApi\QuickHealthy.PL.WebApi.csproj", "{DCC22860-5FD0-42CB-80AB-7E29F03E586B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuickHealthy.PL.WebApp", "QuickHealthy.PL.WebApp\QuickHealthy.PL.WebApp.csproj", "{955055D4-91F1-43E8-9FFB-A7F785437698}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuickHealthy.Client.WinForms", "QuickHealthy.Client.WinForms\QuickHealthy.Client.WinForms.csproj", "{3B1D08C1-1E8F-4229-A6A1-448D259BB224}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6BE23769-B61D-4612-B09F-E1321DCF2AE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BE23769-B61D-4612-B09F-E1321DCF2AE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BE23769-B61D-4612-B09F-E1321DCF2AE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BE23769-B61D-4612-B09F-E1321DCF2AE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89BDF1DF-EB02-4F5E-A124-BD3AFAA7D6EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89BDF1DF-EB02-4F5E-A124-BD3AFAA7D6EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89BDF1DF-EB02-4F5E-A124-BD3AFAA7D6EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89BDF1DF-EB02-4F5E-A124-BD3AFAA7D6EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3001CA92-DEFF-43B5-8CA1-AACB32B9112F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3001CA92-DEFF-43B5-8CA1-AACB32B9112F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3001CA92-DEFF-43B5-8CA1-AACB32B9112F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3001CA92-DEFF-43B5-8CA1-AACB32B9112F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCC22860-5FD0-42CB-80AB-7E29F03E586B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCC22860-5FD0-42CB-80AB-7E29F03E586B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCC22860-5FD0-42CB-80AB-7E29F03E586B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCC22860-5FD0-42CB-80AB-7E29F03E586B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{955055D4-91F1-43E8-9FFB-A7F785437698}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{955055D4-91F1-43E8-9FFB-A7F785437698}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{955055D4-91F1-43E8-9FFB-A7F785437698}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{955055D4-91F1-43E8-9FFB-A7F785437698}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B1D08C1-1E8F-4229-A6A1-448D259BB224}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B1D08C1-1E8F-4229-A6A1-448D259BB224}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B1D08C1-1E8F-4229-A6A1-448D259BB224}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B1D08C1-1E8F-4229-A6A1-448D259BB224}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {70F5BD6C-65A0-482C-8043-39650B2CCD32}
+	EndGlobalSection
+EndGlobal

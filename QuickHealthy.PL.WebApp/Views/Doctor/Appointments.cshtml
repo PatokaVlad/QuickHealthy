@@ -1,0 +1,51 @@
+﻿@model int
+
+@inject QuickHealthy.BLL.Interfaces.IAppointmentService _appointmentService
+@inject AutoMapper.IMapper _mapper
+
+@{
+    var appointments = _mapper.Map<IEnumerable<QuickHealthy.PL.Models.AppointmentViewModel>>(_appointmentService.GetAppointmentsByDoctror(Model));
+}
+
+@foreach (var appointment in appointments)
+{
+    appointment.DoctorFirstName = Model.ToString();
+
+    <form asp-action="EditAppointment" asp-controller="Doctor" asp-anti-forgery="true">
+        <table>
+            <tr>
+                <td>
+                    <label asp-for="@appointment.Id">Id: </label>
+                    <input type="text" asp-for="@appointment.Id" />
+                    <span asp-validation-for="@appointment.Id" />
+                </td>
+                <td>
+                    <label asp-for="@appointment.Date">Date: </label>
+                    <input type="date" asp-for="@appointment.Date" />
+                    <span asp-validation-for="@appointment.Date" />
+                </td>
+                <td>
+                    <label asp-for="@appointment.Time">Time </label>
+                    <input type="time" asp-for="@appointment.Time" />
+                    <span asp-validation-for="@appointment.Time" />
+                </td>
+                <td>
+                    <label asp-for="@appointment.Diagnosis">Diagnosis: </label>
+                    <input type="text" asp-for="@appointment.Diagnosis" />
+                    <span asp-validation-for="@appointment.Diagnosis" />
+                </td>
+                <td>
+                    <label asp-for="@appointment.MedicalCardId">Medical card id: </label>
+                    <input type="text" asp-for="@appointment.MedicalCardId" />
+                    <span asp-validation-for="@appointment.MedicalCardId" />
+                </td>
+                <td>
+                    <input type="hidden" asp-for="@appointment.DoctorFirstName" />
+                    <span asp-validation-for="@appointment.DoctorFirstName" />
+                    <input type="submit" value="Edit" class="btn btn-outline-dark" />
+                </td>
+            </tr>
+        </table>
+    </form>
+}
+

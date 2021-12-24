@@ -1,0 +1,28 @@
+﻿@model int
+@{
+    var userId = Model.ToString();
+}
+
+<a asp-action="MakeAnAppointment" asp-controller="Patient" asp-route-id="@userId">
+    <div>
+        <div class="form-group">
+            <input type="submit" value="Make an appointment" class="btn btn-outline-dark" />
+        </div>
+    </div>
+</a>
+
+<form asp-controller="Patient" asp-action="Appointments" asp-route-id="@userId">
+    <div>
+        <div class="form-group">
+            <input type="submit" value="Appointments" class="btn btn-outline-dark" />
+        </div>
+    </div>
+</form>
+
+<a asp-action="PersonalInformation" asp-controller="Patient" asp-route-id="@userId">
+    <div>
+        <div class="form-group">
+            <input type="submit" value="Personal information" class="btn btn-outline-dark" />
+        </div>
+    </div>
+</a>

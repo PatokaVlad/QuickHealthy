@@ -1,0 +1,40 @@
+﻿@model QuickHealthy.PL.Models.DoctorViewModel
+
+<form asp-action="AddDoctor" asp-controller="Admin">
+    <div class="validation" asp-validation-summary="ModelOnly"></div>
+    <div>
+        <div class="form-group">
+            <label asp-for="FirstName">Введите FirstName</label>
+            <input type="text" asp-for="FirstName" />
+            <span asp-validation-for="FirstName" />
+        </div>
+        <div class="form-group">
+            <label asp-for="LastName">Введите LastName</label>
+            <input asp-for="LastName" />
+            <span asp-validation-for="LastName" />
+        </div>
+        <div class="form-group">
+            <label asp-for="JobPosition">Введите JobPosition</label>
+            <input asp-for="JobPosition" />
+            <span asp-validation-for="JobPosition" />
+        </div>
+        <div class="form-group">
+            <label asp-for="StartWorkTime">Введите StartWorkTime</label>
+            <input type="time" asp-for="StartWorkTime" />
+            <span asp-validation-for="StartWorkTime" />
+        </div>
+        <div class="form-group">
+            <label asp-for="EndWorkTime">Введите EndWorkTime</label>
+            <input type="time" asp-for="EndWorkTime" />
+            <span asp-validation-for="EndWorkTime" />
+        </div>
+        <div class="form-group">
+            <label asp-for="OfficeId">Введите OfficeId</label>
+            <input asp-for="OfficeId" />
+            <span asp-validation-for="OfficeId" />
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Add" class="btn btn-outline-dark" />
+        </div>
+    </div>
+</form>

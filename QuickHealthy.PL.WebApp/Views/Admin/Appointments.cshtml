@@ -1,0 +1,54 @@
+﻿@inject QuickHealthy.BLL.Interfaces.IAppointmentService _appointmentService
+@inject AutoMapper.IMapper _mapper
+@inject QuickHealthy.PL.WebApp.Services.DoctorHelperService _doctorHelperService
+
+@{
+    var appointments = _mapper.Map<IEnumerable<QuickHealthy.PL.Models.AppointmentViewModel>>(_appointmentService.GetAll());
+
+    foreach (var appointment in appointments)
+    {
+        var app = _doctorHelperService.EnrichAppointmentWithDoctorById(int.Parse(appointment.DoctorFirstName));
+        appointment.DoctorFirstName = app.DoctorFirstName;
+        appointment.DoctorLastName = app.DoctorLastName;
+        appointment.DoctorJobPosition = app.DoctorJobPosition;
+    }
+}
+
+<table class="table">
+    <thead>
+        <tr><th>Id</th><th>Diagnosis</th><th>Doctor first name</th><th>Doctor last name</th><th>Doctor job position</th><th>MedicalCardId</th><th>Date</th><th>Time</th></tr>
+    </thead>
+
+
+    <tbody>
+        @foreach (var appointment in appointments)
+        {
+            <tr>
+                <td>
+                    @appointment.Id
+                </td>
+                <td>
+                    @appointment.Diagnosis
+                </td>
+                <td>
+                    @appointment.DoctorFirstName
+                </td>
+                <td>
+                    @appointment.DoctorLastName
+                </td>
+                <td>
+                    @appointment.DoctorJobPosition
+                </td>
+                <td>
+                    @appointment.MedicalCardId
+                </td>
+                <td>
+                    @appointment.Date
+                </td>
+                <td>
+                    @appointment.Time
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

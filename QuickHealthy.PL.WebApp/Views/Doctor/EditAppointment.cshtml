@@ -1,0 +1,34 @@
+﻿@model QuickHealthy.PL.Models.AppointmentViewModel
+
+@inject QuickHealthy.BLL.Interfaces.IAppointmentService _appointmentService
+
+@{ 
+    var app = _appointmentService.Get(Model.Id);
+}
+<form method="post" asp-controller="Doctor" asp-action="EditAppointment">
+    <div class="validation" asp-validation-summary="ModelOnly"></div>
+    <div>
+        <div class="form-group">
+            <label asp-for="@app.Date">@app.Date</label>
+            <input type="date" asp-for="@app.Date" />
+            <span asp-validation-for="@app.Date" />
+        </div>
+        <div class="form-group">
+            <label asp-for="@app.Time">@app.Time</label>
+            <input type="time" asp-for="@app.Time" />
+            <span asp-validation-for="@app.Time" />
+        </div>
+        <div class="form-group">
+            <label asp-for="@app.Diagnosis">@app.Diagnosis</label>
+            <input type="text" asp-for="@app.Diagnosis" />
+            <span asp-validation-for="@app.Diagnosis" />
+        </div>
+        <input asp-for="@app.DoctorId" type="hidden" />
+        <input asp-for="@app.MedicalCardId" type="hidden" />
+        <input asp-for="@app.Id" type="hidden" />
+
+        <div class="form-group">
+            <input type="submit" value="Edit" class="btn btn-outline-dark" />
+        </div>
+    </div>
+</form>
